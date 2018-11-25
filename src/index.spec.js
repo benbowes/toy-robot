@@ -87,6 +87,7 @@ describe('RobotTest', () => {
 
 			controls.doInstruction(commandProcessor(['PLACE 0,0,NORTH'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
+
 			assert.equal(controls.robot.getPosition().x, 0);
 			assert.equal(controls.robot.getPosition().y, 1);
 			assert.equal(controls.robot.getFacing(), 'NORTH');
@@ -132,6 +133,7 @@ describe('RobotTest', () => {
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
+
 			assert.equal(controls.doInstruction(commandProcessor(['REPORT'])[0]), '0,4,NORTH');
 		});
 
@@ -149,6 +151,7 @@ describe('RobotTest', () => {
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
+
 			assert.equal(controls.doInstruction(commandProcessor(['REPORT'])[0]), '0,0,WEST');
 		});
 
@@ -167,6 +170,7 @@ describe('RobotTest', () => {
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
+
 			assert.equal(controls.doInstruction(commandProcessor(['REPORT'])[0]), '4,0,EAST');
 		});
 
@@ -177,8 +181,8 @@ describe('RobotTest', () => {
 			controls.doInstruction(commandProcessor(['LEFT'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
 			controls.doInstruction(commandProcessor(['MOVE'])[0]);
+
 			assert.equal(controls.doInstruction(commandProcessor(['REPORT'])[0]), '2,0,EAST');
 		});
-
 	});
 });
