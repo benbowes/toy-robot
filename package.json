@@ -1,0 +1,23 @@
+{
+	"name": "robot",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/benbowes/robot.git"
+	},
+	"description": "Toy Robot",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "node ./src/index.js",
+		"test": "mocha './src/index.spec.js'"
+	},
+	"author": "Ben Bowes",
+	"license": "MIT",
+	"dependencies": {
+		"inquirer": "^6.2.0"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^5.2.0"
+	}
+}
